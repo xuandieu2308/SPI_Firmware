@@ -1,53 +1,151 @@
-| Supported Targets | ESP32 | ESP32-C2 | ESP32-C3 | ESP32-C5 | ESP32-C6 | ESP32-C61 | ESP32-H2 | ESP32-H21 | ESP32-H4 | ESP32-P4 | ESP32-S2 | ESP32-S3 | Linux |
-| ----------------- | ----- | -------- | -------- | -------- | -------- | --------- | -------- | --------- | -------- | -------- | -------- | -------- | ----- |
+| Supported Targets | ESP32 | ESP32-C3 | ESP32-S2 | ESP32-S3 |
+| ----------------- | ----- | -------- | -------- | -------- |
 
-# Hello World Example
+# SPI RTOS Layered Firmware Example (Master ↔ Slave)
 
-Starts a FreeRTOS task to print "Hello World".
+This project demonstrates **SPI communication** between two ESP32 boards (**SPI Master** and **SPI Slave**) using **ESP-IDF** and **FreeRTOS**, designed with a **layered firmware architecture**.
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+The firmware is structured into **Application**, **Service**, and **Hardware Driver** layers to ensure clear separation of responsibilities and easy scalability.
 
-## How to use example
+---
 
-Follow detailed instructions provided specifically for this example.
+## Firmware layering architecture
 
-Select the instructions depending on Espressif chip installed on your development board:
+The project is divided into the following layers:
 
-- [ESP32 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/stable/get-started/index.html)
-- [ESP32-S2 Getting Started Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/get-started/index.html)
+Application Layer
+├── app_main.c
 
+Service Layer
+├── spi_service.c
+└── spi_service.h
 
-## Example folder contents
+Hardware Driver Layer
+├── spi_master_driver.c / spi_slave_driver.c
+└── spi_master_driver.h / spi_slave_driver.h
 
-The project **hello_world** contains one source file in C language [hello_world_main.c](main/hello_world_main.c). The file is located in folder [main](main).
+markdown
+Sao chép mã
 
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt` files that provide set of directives and instructions describing the project's source files and targets (executable, library, or both).
+### Application Layer
+- Entry point of the firmware
+- Creates and manages FreeRTOS tasks
+- Calls service-layer APIs only
+- Contains no direct hardware access
 
-Below is short explanation of remaining files in the project folder.
+### Service Layer
+- Abstracts SPI communication logic
+- Handles data preparation and parsing
+- Decouples application logic from hardware drivers
 
-```
-├── CMakeLists.txt
-├── pytest_hello_world.py      Python script used for automated testing
-├── main
-│   ├── CMakeLists.txt
-│   └── hello_world_main.c
-└── README.md                  This is the file you are currently reading
-```
+### Hardware Driver Layer
+- Low-level SPI drivers
+- Directly interfaces with ESP-IDF SPI APIs
+- Responsible for SPI initialization and data transfer
 
-For more information on structure and contents of ESP-IDF projects, please refer to Section [Build System](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/build-system.html) of the ESP-IDF Programming Guide.
+---
 
-## Troubleshooting
+## Project structure
+---
+SPI
+├── esp32_spi_master
+│ ├── hardware
+│ │ ├── spi_master_driver.c
+│ │ └── spi_master_driver.h
+│ ├── service
+│ │ ├── spi_service.c
+│ │ └── spi_service.h
+│ ├── main
+│ │ └── app_main.c
+│ ├── CMakeLists.txt
+│ └── sdkconfig
+│
+├── esp32_spi_slave
+│ ├── hardware
+│ │ ├── spi_slave_driver.c
+│ │ └── spi_slave_driver.h
+│ ├── service
+│ │ ├── spi_service.c
+│ │ └── spi_service.h
+│ ├── main
+│ │ └── app_main.c
+│ └── CMakeLists.txt
+│
+└── README.md
+---
 
-* Program upload failure
+## How the example works
 
-    * Hardware connection is not correct: run `idf.py -p PORT monitor`, and reboot your board to see if there are any output logs.
-    * The baud rate for downloading is too high: lower your baud rate in the `menuconfig` menu, and try again.
+- One ESP32 acts as **SPI Master**
+- One ESP32 acts as **SPI Slave**
+- SPI initialization is handled in the hardware layer
+- Data exchange logic is implemented in the service layer
+- Application layer triggers SPI communication using FreeRTOS tasks
 
-## Technical support and feedback
+---
 
-Please use the following feedback channels:
+## Hardware required
 
-* For technical queries, go to the [esp32.com](https://esp32.com/) forum
-* For a feature request or bug report, create a [GitHub issue](https://github.com/espressif/esp-idf/issues)
+- 2 × ESP32 development boards
+- Jumper wires
 
-We will get back to you as soon as possible.
+### SPI wiring (example)
+
+| Signal | Master GPIO | Slave GPIO |
+|------|-------------|------------|
+| MOSI | GPIO23 | GPIO23 |
+| MISO | GPIO19 | GPIO19 |
+| SCLK | GPIO18 | GPIO18 |
+| CS   | GPIO5  | GPIO5  |
+| GND  | GND    | GND    |
+
+GPIO pins may be adjusted in driver configuration.
+
+---
+
+## FreeRTOS usage
+
+- SPI communication runs inside FreeRTOS tasks
+- Architecture supports:
+  - Mutex protection for SPI bus
+  - Queue-based message passing
+  - Easy extension to multiple SPI devices
+
+---
+
+## Build, flash and monitor
+
+### SPI Master
+```bash
+cd esp32_spi_master
+idf.py set-target esp32
+idf.py build flash monitor
+SPI Slave
+bash
+Sao chép mã
+cd esp32_spi_slave
+idf.py set-target esp32
+idf.py build flash monitor
+Expected behavior
+SPI Master sends data periodically
+
+SPI Slave receives data and responds if implemented
+
+Logs are printed on both boards
+
+Clean separation between application, service, and hardware layers
+
+Troubleshooting
+SPI communication issues
+Check MOSI/MISO/SCLK/CS wiring
+
+Ensure Master and Slave use compatible SPI modes
+
+Verify clock speed configuration
+
+Confirm both boards share a common GND
+
+Technical support and feedback
+ESP32 Forum: https://esp32.com/
+
+ESP-IDF Issues: https://github.com/espressif/esp-idf/issues
