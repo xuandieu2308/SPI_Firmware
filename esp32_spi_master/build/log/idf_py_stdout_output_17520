@@ -1,0 +1,416 @@
+Command: E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\SPI\esp32_spi_master\build\esp32_spi_master.elf E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\SPI\esp32_spi_master\build\bootloader\bootloader.elf --force-color -m 'E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'COM7'
+v3.0
+[0;32mI (34) boot.e�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 10 2025 11:14:48[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b190h ( 45456) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b1b8 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001b1e0 vaddr=3ffb0000 size=02540h (  9536) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=0001d728 vaddr=40080000 size=028f0h ( 10480) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=15adch ( 88796) map[0m
+[0;32mI (153) esp_image: segment 5: paddr=00035b04 vaddr=400828f0 size=0c448h ( 50248) load[0m
+[0;32mI (180) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (180) boot: Disabling RNG early entropy source...[0m
+[0;32mI (191) cpu_start: Multicore app[0m
+[0;32mI (199) cpu_start: Pro cpu start user code[0m
+[0;32mI (199) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (199) app_init: Application information:[0m
+[0;32mI (199) app_init: Project name:     esp32_spi_master[0m
+[0;32mI (204) app_init: App version:      v5.5-dirty[0m
+[0;32mI (208) app_init: Compile time:     Sep 10 2025 11:14:39[0m
+[0;32mI (213) app_init: ELF file SHA256:  aa1206a1d...[0m
+[0;32mI (217) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (222) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (225) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (229) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (234) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (240) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (245) heap_init: At 3FFB2E40 len 0002D1C0 (180 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (255) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (261) heap_init: At 4008ED38 len 000112C8 (68 KiB): IRAM[0m
+[0;32mI (267) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (273) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (286) main_task: Started on CPU0[0m
+[0;32mI (296) main_task: Calling app_main()[0m
+[0;32mI (296) MASTER_SEND: Send: count=0, msg=Hello Slave![0m
+[0;32mI (296) main_task: Returned from app_main()[0m
+[0;32mI (3296) MASTER_SEND: Send: count=1, msg=Hello Slave![0m
+[0;32mI (3296) MASTER_RECV: Received from slave: count=1819043176, msg=o master 52[0m
+[0;32mI (6296) MASTER_SEND: Send: count=2, msg=Hello Slave![0m
+[0;32mI (6296) MASTER_RECV: Received from slave: count=1819043176, msg=@[0m
+[0;32mI (9296) MASTER_SEND: Send: count=3, msg=Hello Slave![0m
+[0;32mI (9296) MASTER_RECV: Received from slave: count=1819043176, msg=o master 54[0m
+[0;32mI (12296) MASTER_SEND: Send: count=4, msg=Hello Slave![0m
+[0;32mI (12296) MASTER_RECV: Received from slave: count=1819043176, msg=o master 55[0m
+[0;32mI (15296) MASTER_SEND: Send: count=5, msg=Hello Slave![0m
+[0;32mI (15296) MASTER_RECV: Received from slave: count=1819043176, msg=@[0m
+[0;32mI (18296) MASTER_SEND: Send: count=6, msg=Hello Slave![0m
+[0;32mI (18296) MASTER_RECV: Received from slave: count=1819043176, msg=o master 57[0m
+[0;32mI (21296) MASTER_SEND: Send: count=7, msg=Hello Slave![0m
+[0;32mI (21296) MASTER_RECV: Received from slave: count=1819043176, msg=o master 58[0m
+[0;32mI (24296) MASTER_SEND: Send: count=8, msg=Hello Slave![0m
+[0;32mI (24296) MASTER_RECV: Received from slave: count=1819043176, msg=o master 59[0m
+[0;32mI (27296) MASTER_SEND: Send: count=9, msg=Hello Slave![0m
+[0;32mI (27296) MASTER_RECV: Received from slave: count=1819043176, msg=@[0m
+[0;32mI (30296) MASTER_SEND: Send: count=10, msg=Hello Slave![0m
+[0;32mI (30296) MASTER_RECV: Received from slave: count=1819043176, msg=o master 61[0m
+[0;32mI (33296) MASTER_SEND: Send: count=11, msg=Hello Slave![0m
+[0;32mI (36296) MASTER_SEND: Send: count=12, msg=Hello Slave![0m
+[0;32mI (39296) MASTER_SEND: Send: count=13, msg=Hello Slave![0m
+[0;32mI (39296) MASTER_RECV: Received from slave: count=0, msg=Hell Slave![0m
+[0;32mI (42296) MASTER_SEND: Send: count=14, msg=Hello Slave![0m
+[0;32mI (42296) MASTER_RECV: Received from slave: count=1, msg=Hello Master![0m
+[0;32mI (45296) MASTER_SEND: Send: count=15, msg=Hello Slave![0m
+[0;32mI (45296) MASTER_RECV: Received from slave: count=2, msg=Hello Mastee[0m
+[0;32mI (48296) MASTER_SEND: Send: count=16, msg=Hello Slave![0m
+[0;32mI (48296) MASTER_RECV: Received from slave: count=3, msg=Hello Master![0m
+[0;32mI (51296) MASTER_SEND: Send: count=17, msg=Hello Slave![0m
+[0;32mI (51296) MASTER_RECV: Received from slave: count=4, msg=Hello D[0m
+[0;32mI (54296) MASTER_SEND: Send: count=18, msg=Hello Slave![0m
+[0;32mI (54296) MASTER_RECV: Received from slave: count=5, msg=Hello Master![0m
+[0;32mI (57296) MASTER_SEND: Send: count=19, msg=Hello Slave![0m
+[0;32mI (57296) MASTER_RECV: Received from slave: count=6, msg=Heldo Slave![0m
+[0;32mI (60296) MASTER_SEND: Send: count=20, msg=Hello Slave![0m
+[0;32mI (63296) MASTER_SEND: Send: count=21, msg=Hello Slave![0m
+[0;32mI (63296) MASTER_RECV: Received from slave: count=8, msg=Hello Master![0m
+[0;32mI (66296) MASTER_SEND: Send: count=22, msg=Hello Slave![0m
+[0;32mI (66296) MASTER_RECV: Received from slave: count=9, msg=Hello Master![0m
+[0;32mI (69296) MASTER_SEND: Send: count=23, msg=Hello Slave![0m
+[0;32mI (69296) MASTER_RECV: Received from slave: count=10, msg=Hello Master![0m
+[0;32mI (72296) MASTER_SEND: Send: count=24, msg=Hello Slave![0m
+[0;32mI (72296) MASTER_RECV: Received from slave: count=11, msg=Hello Master![0m
+[0;32mI (75296) MASTER_SEND: Send: count=25, msg=Hello Slave![0m
+[0;32mI (75296) MASTER_RECV: Received from slave: count=12, msg=Hello Master![0m
+[0;32mI (78296) MASTER_SEND: Send: count=26, msg=Hello Slave![0m
+[0;32mI (78296) MASTER_RECV: Received from slave: count=13, msg=Hello Master![0m
+[0;32mI (81296) MASTER_SEND: Send: count=27, msg=Hello Slave![0m
+[0;32mI (81296) MASTER_RECV: Received from slave: count=14, msg=Hello F[0m
+[0;32mI (84296) MASTER_SEND: Send: count=28, msg=Hello Slave![0m
+[0;32mI (84296) MASTER_RECV: Received from slave: count=15, msg=Hello F[0m
+[0;32mI (87296) MASTER_SEND: Send: count=29, msg=Hello Slave![0m
+[0;32mI (87296) MASTER_RECV: Received from slave: count=16, msg=Hello F[0m
+[0;32mI (90296) MASTER_SEND: Send: count=30, msg=Hello Slave![0m
+[0;32mI (90296) MASTER_RECV: Received from slave: count=17, msg=Hello F[0m
+[0;32mI (93296) MASTER_SEND: Send: count=31, msg=Hello Slave![0m
+[0;32mI (93296) MASTER_RECV: Received from slave: count=18, msg=Hello Master![0m
+[0;32mI (96296) MASTER_SEND: Send: count=32, msg=Hello Slave![0m
+[0;32mI (96296) MASTER_RECV: Received from slave: count=19, msg=Hello Master![0m
+[0;32mI (99296) MASTER_SEND: Send: count=33, msg=Hello Slave![0m
+[0;32mI (99296) MASTER_RECV: Received from slave: count=20, msg=Hello Master![0m
+[0;32mI (102296) MASTER_SEND: Send: count=34, msg=Hello Slave![0m
+[0;32mI (102296) MASTER_RECV: Received from slave: count=21, msg=Hello Master![0m
+[0;32mI (105296) MASTER_SEND: Send: count=35, msg=Hello Slave![0m
+[0;32mI (105296) MASTER_RECV: Received from slave: count=22, msg=Hello Master![0m
+[0;32mI (108296) MASTER_SEND: Send: count=36, msg=Hello Slave![0m
+[0;32mI (111296) MASTER_SEND: Send: count=37, msg=Hello Slave![0m
+[0;32mI (111296) MASTER_RECV: Received from slave: count=24, msg=Hello Master![0m
+[0;32mI (114296) MASTER_SEND: Send: count=38, msg=Hello Slave![0m
+[0;32mI (117296) MASTER_SEND: Send: count=39, msg=Hello Slave![0m
+[0;32mI (117296) MASTER_RECV: Received from slave: count=26, msg=Hello Master![0m
+[0;32mI (120296) MASTER_SEND: Send: count=40, msg=Hello Slave![0m
+[0;32mI (120296) MASTER_RECV: Received from slave: count=27, msg=Hello Master![0m
+[0;32mI (123296) MASTER_SEND: Send: count=41, msg=Hello Slave![0m
+[0;32mI (126296) MASTER_SEND: Send: count=42, msg=Hello Slave![0m
+[0;32mI (129296) MASTER_SEND: Send: count=43, msg=Hello Slave![0m
+[0;32mI (129296) MASTER_RECV: Received from slave: count=30, msg=Hello Master![0m
+[0;32mI (132296) MASTER_SEND: Send: count=44, msg=Hello Slave![0m
+[0;32mI (132296) MASTER_RECV: Received from slave: count=31, msg=Hello F[0m
+[0;32mI (135296) MASTER_SEND: Send: count=45, msg=Hello Slave![0m
+[0;32mI (135296) MASTER_RECV: Received from slave: count=32, msg=Hello Master![0m
+[0;32mI (138296) MASTER_SEND: Send: count=46, msg=Hello Slave![0m
+[0;32mI (138296) MASTER_RECV: Received from slave: count=33, msg=Hello Master![0m
+[0;32mI (141296) MASTER_SEND: Send: count=47, msg=Hello Slave![0m
+[0;32mI (141296) MASTER_RECV: Received from slave: count=34, msg=Dello Slave![0m
+[0;32mI (144296) MASTER_SEND: Send: count=48, msg=Hello Slave![0m
+[0;32mI (144296) MASTER_RECV: Received from slave: count=35, msg=Hello F[0m
+[0;32mI (147296) MASTER_SEND: Send: count=49, msg=Hello Slave![0m
+[0;32mI (147296) MASTER_RECV: Received from slave: count=36, msg=Hello Master![0m
+[0;32mI (150296) MASTER_SEND: Send: count=50, msg=Hello Slave![0m
+[0;32mI (150296) MASTER_RECV: Received from slave: count=37, msg=Hello Master![0m
+[0;32mI (153296) MASTER_SEND: Send: count=51, msg=Hello Slave![0m
+[0;32mI (153296) MASTER_RECV: Received from slave: count=38, msg=Hello F[0m
+[0;32mI (156296) MASTER_SEND: Send: count=52, msg=Hello Slave![0m
+[0;32mI (156296) MASTER_RECV: Received from slave: count=39, msg=Hello Master![0m
+[0;32mI (159296) MASTER_SEND: Send: count=53, msg=Hello Slave![0m
+[0;32mI (159296) MASTER_RECV: Received from slave: count=40, msg=Hello Master![0m
+[0;32mI (162296) MASTER_SEND: Send: count=54, msg=Hello Slave![0m
+[0;32mI (165296) MASTER_SEND: Send: count=55, msg=Hello Slave![0m
+[0;32mI (165296) MASTER_RECV: Received from slave: count=42, msg=Hello Master![0m
+[0;32mI (168296) MASTER_SEND: Send: count=56, msg=Hello Slave![0m
+[0;32mI (168296) MASTER_RECV: Received from slave: count=43, msg=Hello Mamve![0m
+[0;32mI (171296) MASTER_SEND: Send: count=57, msg=Hello Slave![0m
+[0;32mI (174296) MASTER_SEND: Send: count=58, msg=Hello Slave![0m
+[0;32mI (174296) MASTER_RECV: Received from slave: count=45, msg=Hello Master![0m
+[0;32mI (177296) MASTER_SEND: Send: count=59, msg=Hello Slave![0m
+[0;32mI (177296) MASTER_RECV: Received from slave: count=46, msg=Hello Master![0m
+[0;32mI (180296) MASTER_SEND: Send: count=60, msg=Hello Slave![0m
+[0;32mI (180296) MASTER_RECV: Received from slave: count=47, msg=Hello Master![0m
+[0;32mI (183296) MASTER_SEND: Send: count=61, msg=Hello Slave![0m
+[0;32mI (183296) MASTER_RECV: Received from slave: count=48, msg=Hello Master![0m
+[0;32mI (186296) MASTER_SEND: Send: count=62, msg=Hello Slave![0m
+[0;32mI (186296) MASTER_RECV: Received from slave: count=49, msg=Hedlo Slave![0m
+[0;32mI (189296) MASTER_SEND: Send: count=63, msg=Hello Slave![0m
+[0;32mI (189296) MASTER_RECV: Received from slave: count=50, msg=Hello F[0m
+[0;32mI (192296) MASTER_SEND: Send: count=64, msg=Hello Slave![0m
+[0;32mI (192296) MASTER_RECV: Received from slave: count=51, msg=Hello Master![0m
+[0;32mI (195296) MASTER_SEND: Send: count=65, msg=Hello Slave![0m
+[0;32mI (195296) MASTER_RECV: Received from slave: count=52, msg=Hello Master![0m
+[0;32mI (198296) MASTER_SEND: Send: count=66, msg=Hello Slave![0m
+[0;32mI (198296) MASTER_RECV: Received from slave: count=53, msg=Hello Mamve![0m
+[0;32mI (201296) MASTER_SEND: Send: count=67, msg=Hello Slave![0m
+[0;32mI (201296) MASTER_RECV: Received from slave: count=54, msg=Hello D[0m
+[0;32mI (204296) MASTER_SEND: Send: count=68, msg=Hello Slave![0m
+[0;32mI (207296) MASTER_SEND: Send: count=69, msg=Hello Slave![0m
+[0;32mI (207296) MASTER_RECV: Received from slave: count=56, msg=Hello Master![0m
+[0;32mI (210296) MASTER_SEND: Send: count=70, msg=Hello Slave![0m
+[0;32mI (210296) MASTER_RECV: Received from slave: count=57, msg=Hello  [0m
+[0;32mI (213296) MASTER_SEND: Send: count=71, msg=Hello Slave![0m
+[0;32mI (213296) MASTER_RECV: Received from slave: count=58, msg=Hello F[0m
+[0;32mI (216296) MASTER_SEND: Send: count=72, msg=Hello Slave![0m
+[0;32mI (219296) MASTER_SEND: Send: count=73, msg=Hello Slave![0m
+[0;32mI (219296) MASTER_RECV: Received from slave: count=60, msg=Hello Master![0m
+[0;32mI (222296) MASTER_SEND: Send: count=74, msg=Hello Slave![0m
+[0;32mI (222296) MASTER_RECV: Received from slave: count=61, msg=Hello Master![0m
+[0;32mI (225296) MASTER_SEND: Send: count=75, msg=Hello Slave![0m
+[0;32mI (225296) MASTER_RECV: Received from slave: count=62, msg=Hello F[0m
+[0;32mI (228296) MASTER_SEND: Send: count=76, msg=Hello Slave![0m
+[0;32mI (228296) MASTER_RECV: Received from slave: count=63, msg=Hello Master![0m
+[0;32mI (231296) MASTER_SEND: Send: count=77, msg=Hello Slave![0m
+[0;32mI (231296) MASTER_RECV: Received from slave: count=64, msg=Hello Master![0m
+[0;32mI (234296) MASTER_SEND: Send: count=78, msg=Hello Slave![0m
+[0;32mI (234296) MASTER_RECV: Received from slave: count=65, msg=Hello Master![0m
+[0;32mI (237296) MASTER_SEND: Send: count=79, msg=Hello Slave![0m
+[0;32mI (237296) MASTER_RECV: Received from slave: count=66, msg=Hello[0m
+[0;32mI (240296) MASTER_SEND: Send: count=80, msg=Hello Slave![0m
+[0;32mI (240296) MASTER_RECV: Received from slave: count=67, msg=Hello Master![0m
+[0;32mI (243296) MASTER_SEND: Send: count=81, msg=Hello Slave![0m
+[0;32mI (243296) MASTER_RECV: Received from slave: count=68, msg=Hello F[0m
+[0;32mI (246296) MASTER_SEND: Send: count=82, msg=Hello Slave![0m
+[0;32mI (246296) MASTER_RECV: Received from slave: count=69, msg=Hello Master![0m
+[0;32mI (249296) MASTER_SEND: Send: count=83, msg=Hello Slave![0m
+[0;32mI (249296) MASTER_RECV: Received from slave: count=70, msg=Hello Master![0m
+[0;32mI (252296) MASTER_SEND: Send: count=84, msg=Hello Slave![0m
+[0;32mI (255296) MASTER_SEND: Send: count=85, msg=Hello Slave![0m
+[0;32mI (255296) MASTER_RECV: Received from slave: count=72, msg=Hello Master![0m
+[0;32mI (258296) MASTER_SEND: Send: count=86, msg=Hello Slave![0m
+[0;32mI (258296) MASTER_RECV: Received from slave: count=73, msg=Hello Master![0m
+[0;32mI (261296) MASTER_SEND: Send: count=87, msg=Hello Slave![0m
+[0;32mI (264296) MASTER_SEND: Send: count=88, msg=Hello Slave![0m
+[0;32mI (264296) MASTER_RECV: Received from slave: count=75, msg=Hello Master![0m
+[0;32mI (267296) MASTER_SEND: Send: count=89, msg=Hello Slave![0m
+[0;32mI (270296) MASTER_SEND: Send: count=90, msg=Hello Slave![0m
+[0;32mI (273296) MASTER_SEND: Send: count=91, msg=Hello Slave![0m
+[0;32mI (276296) MASTER_SEND: Send: count=92, msg=Hello Slave![0m
+[0;32mI (276296) MASTER_RECV: Received from slave: count=79, msg=Hello Master![0m
+[0;32mI (279296) MASTER_SEND: Send: count=93, msg=Hello Slave![0m
+[0;32mI (279296) MASTER_RECV: Received from slave: count=80, msg=Hello Master![0m
+[0;32mI (282296) MASTER_SEND: Send: count=94, msg=Hello Slave![0m
+[0;32mI (285296) MASTER_SEND: Send: count=95, msg=Hello Slave![0m
+[0;32mI (285296) MASTER_RECV: Received from slave: count=82, msg=Hello Master![0m
+[0;32mI (288296) MASTER_SEND: Send: count=96, msg=Hello Slave![0m
+[0;32mI (288296) MASTER_RECV: Received from slave: count=83, msg=Hello Master![0m
+[0;32mI (291296) MASTER_SEND: Send: count=97, msg=Hello Slave![0m
+[0;32mI (294296) MASTER_SEND: Send: count=98, msg=Hello Slave![0m
+[0;32mI (294296) MASTER_RECV: Received from slave: count=85, msg=Hello Master![0m
+[0;32mI (297296) MASTER_SEND: Send: count=99, msg=Hello Slave![0m
+[0;32mI (297296) MASTER_RECV: Received from slave: count=86, msg=Hello Mastee[0m
+[0;32mI (300296) MASTER_SEND: Send: count=100, msg=Hello Slave![0m
+[0;32mI (300296) MASTER_RECV: Received from slave: count=87, msg=Hello F[0m
+[0;32mI (303296) MASTER_SEND: Send: count=101, msg=Hello Slave![0m
+[0;32mI (303296) MASTER_RECV: Received from slave: count=88, msg=Hello F[0m
+[0;32mI (306296) MASTER_SEND: Send: count=102, msg=Hello Slave![0m
+[0;32mI (306296) MASTER_RECV: Received from slave: count=89, msg=Hello Master![0m
+[0;32mI (309296) MASTER_SEND: Send: count=103, msg=Hello Slave![0m
+[0;32mI (309296) MASTER_RECV: Received from slave: count=90, msg=Hello Master![0m
+[0;32mI (312296) MASTER_SEND: Send: count=104, msg=Hello Slave![0m
+[0;32mI (312296) MASTER_RECV: Received from slave: count=91, msg=Hello Master![0m
+[0;32mI (315296) MASTER_SEND: Send: count=105, msg=Hello Slave![0m
+[0;32mI (315296) MASTER_RECV: Received from slave: count=92, msg=Hello Master![0m
+[0;32mI (318296) MASTER_SEND: Send: count=106, msg=Hello Slave![0m
+[0;32mI (318296) MASTER_RECV: Received from slave: count=93, msg=Hello Master![0m
+[0;32mI (321296) MASTER_SEND: Send: count=107, msg=Hello Slave![0m
+[0;32mI (324296) MASTER_SEND: Send: count=108, msg=Hello Slave![0m
+[0;32mI (324296) MASTER_RECV: Received from slave: count=95, msg=Hello Master![0m
+[0;32mI (327296) MASTER_SEND: Send: count=109, msg=Hello Slave![0m
+[0;32mI (327296) MASTER_RECV: Received from slave: count=96, msg=Hello F[0m
+[0;32mI (330296) MASTER_SEND: Send: count=110, msg=Hello Slave![0m
+[0;32mI (333296) MASTER_SEND: Send: count=111, msg=Hello Slave![0m
+[0;32mI (333296) MASTER_RECV: Received from slave: count=98, msg=Hello Master![0m
+[0;32mI (336296) MASTER_SEND: Send: count=112, msg=Hello Slave![0m
+[0;32mI (336296) MASTER_RECV: Received from slave: count=99, msg=Hello Master![0m
+[0;32mI (339296) MASTER_SEND: Send: count=113, msg=Hello Slave![0m
+[0;32mI (339296) MASTER_RECV: Received from slave: count=100, msg=Hello Master![0m
+[0;32mI (342296) MASTER_SEND: Send: count=114, msg=Hello Slave![0m
+[0;32mI (342296) MASTER_RECV: Received from slave: count=101, msg=Hello Master![0m
+[0;32mI (345296) MASTER_SEND: Send: count=115, msg=Hello Slave![0m
+[0;32mI (345296) MASTER_RECV: Received from slave: count=102, msg=Hello F[0m
+[0;32mI (348296) MASTER_SEND: Send: count=116, msg=Hello Slave![0m
+[0;32mI (348296) MASTER_RECV: Received from slave: count=103, msg=Hello Master![0m
+[0;32mI (351296) MASTER_SEND: Send: count=117, msg=Hello Slave![0m
+[0;32mI (351296) MASTER_RECV: Received from slave: count=104, msg=Hello Master![0m
+[0;32mI (354296) MASTER_SEND: Send: count=118, msg=Hello Slave![0m
+[0;32mI (354296) MASTER_RECV: Received from slave: count=105, msg=Hd�
+[0;32mI (357296) MASTER_SEND: Send: count=119, msg=Hello Slave![0m
+[0;32mI (360296) MASTER_SEND: Send: count=120, msg=Hello Slave![0m
+[0;32mI (360296) MASTER_RECV: Received from slave: count=107, msg=Hello F[0m
+[0;32mI (363296) MASTER_SEND: Send: count=121, msg=Hello Slave![0m
+[0;32mI (366296) MASTER_SEND: Send: count=122, msg=Hello Slave![0m
+[0;32mI (366296) MASTER_RECV: Received from slave: count=109, msg=Hello Master![0m
+[0;32mI (369296) MASTER_SEND: Send: count=123, msg=Hello Slave![0m
+[0;32mI (369296) MASTER_RECV: Received from slave: count=110, msg=Hello Master![0m
+[0;32mI (372296) MASTER_SEND: Send: count=124, msg=Hello Slave![0m
+[0;32mI (372296) MASTER_RECV: Received from slave: count=111, msg=Hello F[0m
+[0;32mI (375296) MASTER_SEND: Send: count=125, msg=Hello Slave![0m
+[0;32mI (375296) MASTER_RECV: Received from slave: count=112, msg=Hello Master![0m
+[0;32mI (378296) MASTER_SEND: Send: count=126, msg=Hello Slave![0m
+[0;32mI (378296) MASTER_RECV: Received from slave: count=113, msg=Hello F[0m
+[0;32mI (381296) MASTER_SEND: Send: count=127, msg=Hello Slave![0m
+[0;32mI (381296) MASTER_RECV: Received from slave: count=114, msg=Hello F[0m
+[0;32mI (384296) MASTER_SEND: Send: count=128, msg=Hello Slave![0m
+[0;32mI (384296) MASTER_RECV: Received from slave: count=115, msg=Hello Master![0m
+[0;32mI (387296) MASTER_SEND: Send: count=129, msg=Hello Slave![0m
+[0;32mI (387296) MASTER_RECV: Received from slave: count=116, msg=Hello Master![0m
+[0;32mI (390296) MASTER_SEND: Send: count=130, msg=Hello Slave![0m
+[0;32mI (390296) MASTER_RECV: Received from slave: count=117, msg=Hello Master![0m
+[0;32mI (393296) MASTER_SEND: Send: count=131, msg=Hello Slave![0m
+[0;32mI (393296) MASTER_RECV: Received from slave: count=118, msg=Hello Master![0m
+[0;32mI (396296) MASTER_SEND: Send: count=132, msg=Hello Slave![0m
+[0;32mI (399296) MASTER_SEND: Send: count=133, msg=Hello Slave![0m
+[0;32mI (399296) MASTER_RECV: Received from slave: count=120, msg=Hello Mastee[0m
+[0;32mI (402296) MASTER_SEND: Send: count=134, msg=Hello Slave![0m
+[0;32mI (402296) MASTER_RECV: Received from slave: count=121, msg=Hello Mamve![0m
+[0;32mI (405296) MASTER_SEND: Send: count=135, msg=Hello Slave![0m
+[0;32mI (405296) MASTER_RECV: Received from slave: count=122, msg=Hello F[0m
+[0;32mI (408296) MASTER_SEND: Send: count=136, msg=Hello Slave![0m
+[0;32mI (408296) MASTER_RECV: Received from slave: count=123, msg=Hello Master![0m
+[0;32mI (411296) MASTER_SEND: Send: count=137, msg=Hello Slave![0m
+[0;32mI (411296) MASTER_RECV: Received from slave: count=124, msg=Hell Slave![0m
+[0;32mI (414296) MASTER_SEND: Send: count=138, msg=Hello Slave![0m
+[0;32mI (414296) MASTER_RECV: Received from slave: count=125, msg=Hello Master![0m
+[0;32mI (417296) MASTER_SEND: Send: count=139, msg=Hello Slave![0m
+[0;32mI (417296) MASTER_RECV: Received from slave: count=126, msg=Hb[0m
+[0;32mI (420296) MASTER_SEND: Send: count=140, msg=Hello Slave![0m
+[0;32mI (420296) MASTER_RECV: Received from slave: count=127, msg=Hello Master![0m
+[0;32mI (423296) MASTER_SEND: Send: count=141, msg=Hello Slave![0m
+[0;32mI (426296) MASTER_SEND: Send: count=142, msg=Hello Slave![0m
+[0;32mI (429296) MASTER_SEND: Send: count=143, msg=Hello Slave![0m
+[0;32mI (432296) MASTER_SEND: Send: count=144, msg=Hello Slave![0m
+[0;32mI (435296) MASTER_SEND: Send: count=145, msg=Hello Slave![0m
+[0;32mI (438296) MASTER_SEND: Send: count=146, msg=Hello Slave![0m
+[0;32mI (441296) MASTER_SEND: Send: count=147, msg=Hello Slave![0m
+[0;32mI (444296) MASTER_SEND: Send: count=148, msg=Hello Slave![0m
+[0;32mI (447296) MASTER_SEND: Send: count=149, msg=Hello Slave![0m
+[0;32mI (450296) MASTER_SEND: Send: count=150, msg=Hello Slave![0m
+[0;32mI (453296) MASTER_SEND: Send: count=151, msg=Hello Slave![0m
+[0;32mI (456296) MASTER_SEND: Send: count=152, msg=Hello Slave![0m
+[0;32mI (459296) MASTER_SEND: Send: count=153, msg=Hello Slave![0m
+[0;32mI (462296) MASTER_SEND: Send: count=154, msg=Hello Slave![0m
+[0;32mI (465296) MASTER_SEND: Send: count=155, msg=Hello Slave![0m
+[0;32mI (468296) MASTER_SEND: Send: count=156, msg=Hello Slave![0m
+[0;32mI (471296) MASTER_SEND: Send: count=157, msg=Hello Slave![0m
+[0;32mI (474296) MASTER_SEND: Send: count=158, msg=Hello Slave![0m
+[0;32mI (474296) MASTER_RECV: Received from slave: count=145, msg=Hello Master![0m
+[0;32mI (477296) MASTER_SEND: Send: count=159, msg=Hello Slave![0m
+[0;32mI (480296) MASTER_SEND: Send: count=160, msg=Hello Slave![0m
+[0;32mI (483296) MASTER_SEND: Send: count=161, msg=Hello Slave![0m
+[0;32mI (486296) MASTER_SEND: Send: count=162, msg=Hello Slave![0m
+[0;32mI (489296) MASTER_SEND: Send: count=163, msg=Hello Slave![0m
+[0;32mI (489296) MASTER_RECV: Received from slave: count=150, msg=Hello Master![0m
+[0;32mI (492296) MASTER_SEND: Send: count=164, msg=Hello Slave![0m
+[0;32mI (495296) MASTER_SEND: Send: count=165, msg=Hello Slave![0m
+[0;32mI (498296) MASTER_SEND: Send: count=166, msg=Hello Slave![0m
+[0;32mI (501296) MASTER_SEND: Send: count=167, msg=Hello Slave![0m
+[0;32mI (504296) MASTER_SEND: Send: count=168, msg=Hello Slave![0m
+[0;32mI (507296) MASTER_SEND: Send: count=169, msg=Hello Slave![0m
+[0;32mI (510296) MASTER_SEND: Send: count=170, msg=Hello Slave![0m
+[0;32mI (513296) MASTER_SEND: Send: count=171, msg=Hello Slave![0m
+[0;32mI (516296) MASTER_SEND: Send: count=172, msg=Hello Slave![0m
+[0;32mI (519296) MASTER_SEND: Send: count=173, msg=Hello Slave![0m
+[0;32mI (522296) MASTER_SEND: Send: count=174, msg=Hello Slave![0m
+[0;32mI (525296) MASTER_SEND: Send: count=175, msg=Hello Slave![0m
+[0;32mI (528296) MASTER_SEND: Send: count=176, msg=Hello Slave![0m
+[0;32mI (531296) MASTER_SEND: Send: count=177, msg=Hello Slave![0m
+[0;32mI (534296) MASTER_SEND: Send: count=178, msg=Hello Slave![0m
+[0;32mI (537296) MASTER_SEND: Send: count=179, msg=Hello Slave![0m
+[0;32mI (540296) MASTER_SEND: Send: count=180, msg=Hello Slave![0m
+[0;32mI (543296) MASTER_SEND: Send: count=181, msg=Hello Slave![0m
+[0;32mI (546296) MASTER_SEND: Send: count=182, msg=Hello Slave![0m
+[0;32mI (549296) MASTER_SEND: Send: count=183, msg=Hello Slave![0m
+[0;32mI (552296) MASTER_SEND: Send: count=184, msg=Hello Slave![0m
+[0;32mI (555296) MASTER_SEND: Send: count=185, msg=Hello Slave![0m
+[0;32mI (558296) MASTER_SEND: Send: count=186, msg=Hello Slave![0m
+[0;32mI (558296) MASTER_RECV: Received from slave: count=173, msg=Hello Master![0m
+[0;32mI (561296) MASTER_SEND: Send: count=187, msg=Hello Slave![0m
+[0;32mI (561296) MASTER_RECV: Received from slave: count=174, msg=Hello Master![0m
+[0;32mI (564296) MASTER_SEND: Send: count=188, msg=Hello Slave![0m
+[0;32mI (564296) MASTER_RECV: Received from slave: count=175, msg=Hello Mastee[0m
+[0;32mI (567296) MASTER_SEND: Send: count=189, msg=Hello Slave![0m
+[0;32mI (567296) MASTER_RECV: Received from slave: count=176, msg=Hello Master![0m
+[0;32mI (570296) MASTER_SEND: Send: count=190, msg=Hello Slave![0m
+[0;32mI (573296) MASTER_SEND: Send: count=191, msg=Hello Slave![0m
+[0;32mI (576296) MASTER_SEND: Send: count=192, msg=Hello Slave![0m
+[0;32mI (579296) MASTER_SEND: Send: count=193, msg=Hello Slave![0m
+[0;32mI (582296) MASTER_SEND: Send: count=194, msg=Hello Slave![0m
+[0;32mI (585296) MASTER_SEND: Send: count=195, msg=Hello Slave![0m
+[0;32mI (588296) MASTER_SEND: Send: count=196, msg=Hello Slave![0m
+[0;32mI (591296) MASTER_SEND: Send: count=197, msg=Hello Slave![0m
+[0;32mI (594296) MASTER_SEND: Send: count=198, msg=Hello Slave![0m
+[0;32mI (597296) MASTER_SEND: Send: count=199, msg=Hello Slave![0m
+[0;32mI (600296) MASTER_SEND: Send: count=200, msg=Hello Slave![0m
+[0;32mI (603296) MASTER_SEND: Send: count=201, msg=Hello Slave![0m
+[0;32mI (606296) MASTER_SEND: Send: count=202, msg=Hello Slave![0m
+[0;32mI (609296) MASTER_SEND: Send: count=203, msg=Hello Slave![0m
+[0;32mI (612296) MASTER_SEND: Send: count=204, msg=Hello Slave![0m
+[0;32mI (615296) MASTER_SEND: Send: count=205, msg=Hello Slave![0m
+[0;32mI (618296) MASTER_SEND: Send: count=206, msg=Hello Slave![0m
+[0;32mI (621296) MASTER_SEND: Send: count=207, msg=Hello Slave![0m
+[0;32mI (624296) MASTER_SEND: Send: count=208, msg=Hello Slave![0m
+[0;32mI (627296) MASTER_SEND: Send: count=209, msg=Hello Slave![0m
+[0;32mI (630296) MASTER_SEND: Send: count=210, msg=Hello Slave![0m
+[0;32mI (633296) MASTER_SEND: Send: count=211, msg=Hello Slave![0m
+[0;32mI (636296) MASTER_SEND: Send: count=212, msg=Hello Slave![0m
+[0;32mI (639296) MASTER_SEND: Send: count=213, msg=Hello Slave![0m
+[0;32mI (642296) MASTER_SEND: Send: count=214, msg=Hello Slave![0m
+[0;32mI (645296) MASTER_SEND: Send: count=215, msg=Hello Slave![0m
+[0;32mI (648296) MASTER_SEND: Send: count=216, msg=Hello Slave![0m
+[0;32mI (651296) MASTER_SEND: Send: count=217, msg=Hello Slave![0m
+[0;32mI (654296) MASTER_SEND: Send: count=218, msg=Hello Slave![0m
+[0;32mI (657296) MASTER_SEND: Send: count=219, msg=Hello Slave![0m
+[0;32mI (660296) MASTER_SEND: Send: count=220, msg=Hello Slave![0m
+[0;32mI (663296) MASTER_SEND: Send: count=221, msg=Hello Slave![0m
+[0;32mI (666296) MASTER_SEND: Send: count=222, msg=Hello Slave![0m
+[0;32mI (669296) MASTER_SEND: Send: count=223, msg=Hello Slave![0m
+[0;32mI (672296) MASTER_SEND: Send: count=224, msg=Hello Slave![0m
+[0;32mI (675296) MASTER_SEND: Send: count=225, msg=Hello Slave![0m
+[0;32mI (678296) MASTER_SEND: Send: count=226, msg=Hello Slave![0m
+[0;32mI (681296) MASTER_SEND: Send: count=227, msg=Hello Slave![0m
+[0;32mI (684296) MASTER_SEND: Send: count=228, msg=Hello Slave![0m
+[0;32mI (687296) MASTER_SEND: Send: count=229, msg=Hello Slave![0m
+[0;32mI (687296) MASTER_RECV: Received from slave: count=216, msg=Hello Master![0m
+[0;32mI (690296) MASTER_SEND: Send: count=230, msg=Hello Slave![0m
+[0;32mI (693296) MASTER_SEND: Send: count=231, msg=Hello Slave![0m
+[0;32mI (696296) MASTER_SEND: Send: count=232, msg=Hello Slave![0m

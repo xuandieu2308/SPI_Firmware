@@ -1,0 +1,401 @@
+Command: E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\SPI\esp32_spi_master\build\esp32_spi_master.elf E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\SPI\esp32_spi_master\build\bootloader\bootloader.elf --force-color -m 'E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'COM7'
+ v3.0
+[0;32mI (34) boot.esp32: SP�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Sep 10 2025 11:14:48[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0b240h ( 45632) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001b268 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=0001b290 vaddr=3ffb0000 size=02540h (  9536) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=0001d7d8 vaddr=40080000 size=02840h ( 10304) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=15bb4h ( 89012) map[0m
+[0;32mI (153) esp_image: segment 5: paddr=00035bdc vaddr=40082840 size=0c4f8h ( 50424) load[0m
+[0;32mI (180) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (181) boot: Disabling RNG early entropy source...[0m
+[0;32mI (191) cpu_start: Multicore app[0m
+[0;32mI (199) cpu_start: Pro cpu start user code[0m
+[0;32mI (199) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (199) app_init: Application information:[0m
+[0;32mI (199) app_init: Project name:     esp32_spi_master[0m
+[0;32mI (204) app_init: App version:      v5.5-dirty[0m
+[0;32mI (208) app_init: Compile time:     Sep 10 2025 11:14:39[0m
+[0;32mI (213) app_init: ELF file SHA256:  f4363741c...[0m
+[0;32mI (218) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (222) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (226) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (230) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (234) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (240) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (245) heap_init: At 3FFB2E48 len 0002D1B8 (180 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (256) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (261) heap_init: At 4008ED38 len 000112C8 (68 KiB): IRAM[0m
+[0;32mI (268) spi_flash: detected chip: generic[0m
+[0;32mI (270) spi_flash: flash io: dio[0m
+[0;33mW (273) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (286) main_task: Started on CPU0[0m
+[0;32mI (296) main_task: Calling app_main()[0m
+[0;32mI (296) MASTER_SEND: Queued: count=0, msg=Hello Slave![0m
+[0;32mI (296) main_task: Returned from app_main()[0m
+[0;32mI (1296) MASTER_SEND: Queued: count=1, msg=Hello Slave![0m
+[0;32mI (2296) MASTER_SEND: Queued: count=2, msg=Hello Slave![0m
+[0;32mI (3296) MASTER_SEND: Queued: count=3, msg=Hello Slave![0m
+[0;32mI (4296) MASTER_SEND: Queued: count=4, msg=Hello Slave![0m
+[0;32mI (5296) MASTER_SEND: Queued: count=5, msg=Hello Slave![0m
+[0;32mI (6296) MASTER_SEND: Queued: count=6, msg=Hello Slave![0m
+[0;32mI (7296) MASTER_SEND: Queued: count=7, msg=Hello Slave![0m
+[0;32mI (8296) MASTER_SEND: Queued: count=8, msg=Hello Slave![0m
+[0;32mI (9296) MASTER_SEND: Queued: count=9, msg=Hello Slave![0m
+[0;32mI (10296) MASTER_SEND: Queued: count=10, msg=Hello Slave![0m
+[0;32mI (11296) MASTER_SEND: Queued: count=11, msg=Hello Slave![0m
+[0;32mI (12296) MASTER_SEND: Queued: count=12, msg=Hello Slave![0m
+[0;32mI (13296) MASTER_SEND: Queued: count=13, msg=Hello Slave![0m
+[0;32mI (14296) MASTER_SEND: Queued: count=14, msg=Hello Slave![0m
+[0;32mI (15296) MASTER_SEND: Queued: count=15, msg=Hello Slave![0m
+[0;32mI (16296) MASTER_SEND: Queued: count=16, msg=Hello Slave![0m
+[0;32mI (17296) MASTER_SEND: Queued: count=17, msg=Hello Slave![0m
+[0;32mI (18296) MASTER_SEND: Queued: count=18, msg=Hello Slave![0m
+[0;32mI (19296) MASTER_SEND: Queued: count=19, msg=Hello Slave![0m
+[0;32mI (20296) MASTER_SEND: Queued: count=20, msg=Hello Slave![0m
+[0;32mI (21296) MASTER_SEND: Queued: count=21, msg=Hello Slave![0m
+[0;32mI (22296) MASTER_SEND: Queued: count=22, msg=Hello Slave![0m
+[0;32mI (23296) MASTER_SEND: Queued: count=23, msg=Hello Slave![0m
+[0;32mI (24296) MASTER_SEND: Queued: count=24, msg=Hello Slave![0m
+[0;32mI (25296) MASTER_SEND: Queued: count=25, msg=Hello Slave![0m
+[0;32mI (26296) MASTER_SEND: Queued: count=26, msg=Hello Slave![0m
+[0;32mI (27296) MASTER_SEND: Queued: count=27, msg=Hello Slave![0m
+[0;32mI (28296) MASTER_SEND: Queued: count=28, msg=Hello Slave![0m
+[0;32mI (29296) MASTER_SEND: Queued: count=29, msg=Hello Slave![0m
+[0;32mI (30296) MASTER_SEND: Queued: count=30, msg=Hello Slave![0m
+[0;32mI (31296) MASTER_SEND: Queued: count=31, msg=Hello Slave![0m
+[0;32mI (32296) MASTER_SEND: Queued: count=32, msg=Hello Slave![0m
+[0;32mI (33296) MASTER_SEND: Queued: count=33, msg=Hello Slave![0m
+[0;32mI (34296) MASTER_SEND: Queued: count=34, msg=Hello Slave![0m
+[0;32mI (35296) MASTER_SEND: Queued: count=35, msg=Hello Slave![0m
+[0;32mI (36296) MASTER_SEND: Queued: count=36, msg=Hello Slave![0m
+[0;32mI (37296) MASTER_SEND: Queued: count=37, msg=Hello Slave![0m
+[0;32mI (38296) MASTER_SEND: Queued: count=38, msg=Hello Slave![0m
+[0;32mI (39296) MASTER_SEND: Queued: count=39, msg=Hello Slave![0m
+[0;32mI (40296) MASTER_SEND: Queued: count=40, msg=Hello Slave![0m
+[0;32mI (41296) MASTER_SEND: Queued: count=41, msg=Hello Slave![0m
+[0;32mI (42296) MASTER_SEND: Queued: count=42, msg=Hello Slave![0m
+[0;32mI (43296) MASTER_SEND: Queued: count=43, msg=Hello Slave![0m
+[0;32mI (44296) MASTER_SEND: Queued: count=44, msg=Hello Slave![0m
+[0;32mI (45296) MASTER_SEND: Queued: count=45, msg=Hello Slave![0m
+[0;32mI (46296) MASTER_SEND: Queued: count=46, msg=Hello Slave![0m
+[0;32mI (47296) MASTER_SEND: Queued: count=47, msg=Hello Slave![0m
+[0;32mI (48296) MASTER_SEND: Queued: count=48, msg=Hello Slave![0m
+[0;32mI (49296) MASTER_SEND: Queued: count=49, msg=Hello Slave![0m
+[0;32mI (50296) MASTER_SEND: Queued: count=50, msg=Hello Slave![0m
+[0;32mI (51296) MASTER_SEND: Queued: count=51, msg=Hello Slave![0m
+[0;32mI (52296) MASTER_SEND: Queued: count=52, msg=Hello Slave![0m
+[0;32mI (53296) MASTER_SEND: Queued: count=53, msg=Hello Slave![0m
+[0;32mI (54296) MASTER_SEND: Queued: count=54, msg=Hello Slave![0m
+[0;32mI (55296) MASTER_SEND: Queued: count=55, msg=Hello Slave![0m
+[0;32mI (56296) MASTER_SEND: Queued: count=56, msg=Hello Slave![0m
+[0;32mI (57296) MASTER_SEND: Queued: count=57, msg=Hello Slave![0m
+[0;32mI (58296) MASTER_SEND: Queued: count=58, msg=Hello Slave![0m
+[0;32mI (59296) MASTER_SEND: Queued: count=59, msg=Hello Slave![0m
+[0;32mI (60296) MASTER_SEND: Queued: count=60, msg=Hello Slave![0m
+[0;32mI (61296) MASTER_SEND: Queued: count=61, msg=Hello Slave![0m
+[0;32mI (62296) MASTER_SEND: Queued: count=62, msg=Hello Slave![0m
+[0;32mI (63296) MASTER_SEND: Queued: count=63, msg=Hello Slave![0m
+[0;32mI (64296) MASTER_SEND: Queued: count=64, msg=Hello Slave![0m
+[0;32mI (65296) MASTER_SEND: Queued: count=65, msg=Hello Slave![0m
+[0;32mI (66296) MASTER_SEND: Queued: count=66, msg=Hello Slave![0m
+[0;32mI (67296) MASTER_SEND: Queued: count=67, msg=Hello Slave![0m
+[0;32mI (68296) MASTER_SEND: Queued: count=68, msg=Hello Slave![0m
+[0;32mI (69296) MASTER_SEND: Queued: count=69, msg=Hello Slave![0m
+[0;32mI (70296) MASTER_SEND: Queued: count=70, msg=Hello Slave![0m
+[0;32mI (71296) MASTER_SEND: Queued: count=71, msg=Hello Slave![0m
+[0;32mI (72296) MASTER_SEND: Queued: count=72, msg=Hello Slave![0m
+[0;32mI (73296) MASTER_SEND: Queued: count=73, msg=Hello Slave![0m
+[0;32mI (74296) MASTER_SEND: Queued: count=74, msg=Hello Slave![0m
+[0;32mI (75296) MASTER_SEND: Queued: count=75, msg=Hello Slave![0m
+[0;32mI (76296) MASTER_SEND: Queued: count=76, msg=Hello Slave![0m
+[0;32mI (77296) MASTER_SEND: Queued: count=77, msg=Hello Slave![0m
+[0;32mI (78296) MASTER_SEND: Queued: count=78, msg=Hello Slave![0m
+[0;32mI (79296) MASTER_SEND: Queued: count=79, msg=Hello Slave![0m
+[0;32mI (80296) MASTER_SEND: Queued: count=80, msg=Hello Slave![0m
+[0;32mI (81296) MASTER_SEND: Queued: count=81, msg=Hello Slave![0m
+[0;32mI (82296) MASTER_SEND: Queued: count=82, msg=Hello Slave![0m
+[0;32mI (83296) MASTER_SEND: Queued: count=83, msg=Hello Slave![0m
+[0;32mI (84296) MASTER_SEND: Queued: count=84, msg=Hello Slave![0m
+[0;32mI (85296) MASTER_SEND: Queued: count=85, msg=Hello Slave![0m
+[0;32mI (86296) MASTER_SEND: Queued: count=86, msg=Hello Slave![0m
+[0;32mI (87296) MASTER_SEND: Queued: count=87, msg=Hello Slave![0m
+[0;32mI (88296) MASTER_SEND: Queued: count=88, msg=Hello Slave![0m
+[0;32mI (89296) MASTER_SEND: Queued: count=89, msg=Hello Slave![0m
+[0;32mI (90296) MASTER_SEND: Queued: count=90, msg=Hello Slave![0m
+[0;32mI (91296) MASTER_SEND: Queued: count=91, msg=Hello Slave![0m
+[0;32mI (92296) MASTER_SEND: Queued: count=92, msg=Hello Slave![0m
+[0;32mI (93296) MASTER_SEND: Queued: count=93, msg=Hello Slave![0m
+[0;32mI (94296) MASTER_SEND: Queued: count=94, msg=Hello Slave![0m
+[0;32mI (95296) MASTER_SEND: Queued: count=95, msg=Hello Slave![0m
+[0;32mI (96296) MASTER_SEND: Queued: count=96, msg=Hello Slave![0m
+[0;32mI (97296) MASTER_SEND: Queued: count=97, msg=Hello Slave![0m
+[0;32mI (98296) MASTER_SEND: Queued: count=98, msg=Hello Slave![0m
+[0;32mI (99296) MASTER_SEND: Queued: count=99, msg=Hello Slave![0m
+[0;32mI (100296) MASTER_SEND: Queued: count=100, msg=Hello Slave![0m
+[0;32mI (101296) MASTER_SEND: Queued: count=101, msg=Hello Slave![0m
+[0;32mI (102296) MASTER_SEND: Queued: count=102, msg=Hello Slave![0m
+[0;32mI (103296) MASTER_SEND: Queued: count=103, msg=Hello Slave![0m
+[0;32mI (104296) MASTER_SEND: Queued: count=104, msg=Hello Slave![0m
+[0;32mI (105296) MASTER_SEND: Queued: count=105, msg=Hello Slave![0m
+[0;32mI (106296) MASTER_SEND: Queued: count=106, msg=Hello Slave![0m
+[0;32mI (107296) MASTER_SEND: Queued: count=107, msg=Hello Slave![0m
+[0;32mI (108296) MASTER_SEND: Queued: count=108, msg=Hello Slave![0m
+[0;32mI (109296) MASTER_SEND: Queued: count=109, msg=Hello Slave![0m
+[0;32mI (110296) MASTER_SEND: Queued: count=110, msg=Hello Slave![0m
+[0;32mI (111296) MASTER_SEND: Queued: count=111, msg=Hello Slave![0m
+[0;32mI (112296) MASTER_SEND: Queued: count=112, msg=Hello Slave![0m
+[0;32mI (113296) MASTER_SEND: Queued: count=113, msg=Hello Slave![0m
+[0;32mI (114296) MASTER_SEND: Queued: count=114, msg=Hello Slave![0m
+[0;32mI (115296) MASTER_SEND: Queued: count=115, msg=Hello Slave![0m
+[0;32mI (116296) MASTER_SEND: Queued: count=116, msg=Hello Slave![0m
+[0;32mI (117296) MASTER_SEND: Queued: count=117, msg=Hello Slave![0m
+[0;32mI (118296) MASTER_SEND: Queued: count=118, msg=Hello Slave![0m
+[0;32mI (119296) MASTER_SEND: Queued: count=119, msg=Hello Slave![0m
+[0;32mI (120296) MASTER_SEND: Queued: count=120, msg=Hello Slave![0m
+[0;32mI (121296) MASTER_SEND: Queued: count=121, msg=Hello Slave![0m
+[0;32mI (122296) MASTER_SEND: Queued: count=122, msg=Hello Slave![0m
+[0;32mI (123296) MASTER_SEND: Queued: count=123, msg=Hello Slave![0m
+[0;32mI (124296) MASTER_SEND: Queued: count=124, msg=Hello Slave![0m
+[0;32mI (125296) MASTER_SEND: Queued: count=125, msg=Hello Slave![0m
+[0;32mI (126296) MASTER_SEND: Queued: count=126, msg=Hello Slave![0m
+[0;32mI (127296) MASTER_SEND: Queued: count=127, msg=Hello Slave![0m
+[0;32mI (128296) MASTER_SEND: Queued: count=128, msg=Hello Slave![0m
+[0;32mI (129296) MASTER_SEND: Queued: count=129, msg=Hello Slave![0m
+[0;32mI (130296) MASTER_SEND: Queued: count=130, msg=Hello Slave![0m
+[0;32mI (131296) MASTER_SEND: Queued: count=131, msg=Hello Slave![0m
+[0;32mI (132296) MASTER_SEND: Queued: count=132, msg=Hello Slave![0m
+[0;32mI (133296) MASTER_SEND: Queued: count=133, msg=Hello Slave![0m
+[0;32mI (134296) MASTER_SEND: Queued: count=134, msg=Hello Slave![0m
+[0;32mI (135296) MASTER_SEND: Queued: count=135, msg=Hello Slave![0m
+[0;32mI (136296) MASTER_SEND: Queued: count=136, msg=Hello Slave![0m
+[0;32mI (137296) MASTER_SEND: Queued: count=137, msg=Hello Slave![0m
+[0;32mI (138296) MASTER_SEND: Queued: count=138, msg=Hello Slave![0m
+[0;32mI (139296) MASTER_SEND: Queued: count=139, msg=Hello Slave![0m
+[0;32mI (140296) MASTER_SEND: Queued: count=140, msg=Hello Slave![0m
+[0;32mI (141296) MASTER_SEND: Queued: count=141, msg=Hello Slave![0m
+[0;32mI (142296) MASTER_SEND: Queued: count=142, msg=Hello Slave![0m
+[0;32mI (143296) MASTER_SEND: Queued: count=143, msg=Hello Slave![0m
+[0;32mI (144296) MASTER_SEND: Queued: count=144, msg=Hello Slave![0m
+[0;32mI (145296) MASTER_SEND: Queued: count=145, msg=Hello Slave![0m
+[0;32mI (146296) MASTER_SEND: Queued: count=146, msg=Hello Slave![0m
+[0;32mI (147296) MASTER_SEND: Queued: count=147, msg=Hello Slave![0m
+[0;32mI (148296) MASTER_SEND: Queued: count=148, msg=Hello Slave![0m
+[0;32mI (149296) MASTER_SEND: Queued: count=149, msg=Hello Slave![0m
+[0;32mI (150296) MASTER_SEND: Queued: count=150, msg=Hello Slave![0m
+[0;32mI (151296) MASTER_SEND: Queued: count=151, msg=Hello Slave![0m
+[0;32mI (152296) MASTER_SEND: Queued: count=152, msg=Hello Slave![0m
+[0;32mI (153296) MASTER_SEND: Queued: count=153, msg=Hello Slave![0m
+[0;32mI (154296) MASTER_SEND: Queued: count=154, msg=Hello Slave![0m
+[0;32mI (155296) MASTER_SEND: Queued: count=155, msg=Hello Slave![0m
+[0;32mI (156296) MASTER_SEND: Queued: count=156, msg=Hello Slave![0m
+[0;32mI (157296) MASTER_SEND: Queued: count=157, msg=Hello Slave![0m
+[0;32mI (158296) MASTER_SEND: Queued: count=158, msg=Hello Slave![0m
+[0;32mI (158996) MASTER_RECV: Received from slave: count=0, msg=Hello Master![0m
+[0;32mI (159296) MASTER_SEND: Queued: count=159, msg=Hello Slave![0m
+[0;32mI (159996) MASTER_RECV: Received from slave: count=1, msg=Hello Master![0m
+[0;32mI (160296) MASTER_SEND: Queued: count=160, msg=Hello Slave![0m
+[0;32mI (160996) MASTER_RECV: Received from slave: count=2, msg=Hello Master![0m
+[0;32mI (161296) MASTER_SEND: Queued: count=161, msg=Hello Slave![0m
+[0;32mI (161996) MASTER_RECV: Received from slave: count=3, msg=Hello Master![0m
+[0;32mI (162296) MASTER_SEND: Queued: count=162, msg=Hello Slave![0m
+[0;32mI (162996) MASTER_RECV: Received from slave: count=4, msg=Hello Master![0m
+[0;32mI (163296) MASTER_SEND: Queued: count=163, msg=Hello Slave![0m
+[0;32mI (163996) MASTER_RECV: Received from slave: count=5, msg=Hello Master![0m
+[0;32mI (164296) MASTER_SEND: Queued: count=164, msg=Hello Slave![0m
+[0;32mI (164996) MASTER_RECV: Received from slave: count=6, msg=Hello Master![0m
+[0;32mI (165296) MASTER_SEND: Queued: count=165, msg=Hello Slave![0m
+[0;32mI (165996) MASTER_RECV: Received from slave: count=7, msg=Hello Master![0m
+[0;32mI (166296) MASTER_SEND: Queued: count=166, msg=Hello Slave![0m
+[0;32mI (166996) MASTER_RECV: Received from slave: count=8, msg=Hello Master![0m
+[0;32mI (167296) MASTER_SEND: Queued: count=167, msg=Hello Slave![0m
+[0;32mI (167996) MASTER_RECV: Received from slave: count=9, msg=Hello Master![0m
+[0;32mI (168296) MASTER_SEND: Queued: count=168, msg=Hello Slave![0m
+[0;32mI (168996) MASTER_RECV: Received from slave: count=10, msg=Hello Master![0m
+[0;32mI (169296) MASTER_SEND: Queued: count=169, msg=Hello Slave![0m
+[0;32mI (169996) MASTER_RECV: Received from slave: count=11, msg=Hello Master![0m
+[0;32mI (170296) MASTER_SEND: Queued: count=170, msg=Hello Slave![0m
+[0;32mI (170996) MASTER_RECV: Received from slave: count=12, msg=Hello Master![0m
+[0;32mI (171296) MASTER_SEND: Queued: count=171, msg=Hello Slave![0m
+[0;32mI (171996) MASTER_RECV: Received from slave: count=13, msg=Hello Master![0m
+[0;32mI (172296) MASTER_SEND: Queued: count=172, msg=Hello Slave![0m
+[0;32mI (172996) MASTER_RECV: Received from slave: count=14, msg=Hello Master![0m
+[0;32mI (173296) MASTER_SEND: Queued: count=173, msg=Hello Slave![0m
+[0;32mI (173996) MASTER_RECV: Received from slave: count=15, msg=Hello Master![0m
+[0;32mI (174296) MASTER_SEND: Queued: count=174, msg=Hello Slave![0m
+[0;32mI (174996) MASTER_RECV: Received from slave: count=16, msg=Hello Master![0m
+[0;32mI (175296) MASTER_SEND: Queued: count=175, msg=Hello Slave![0m
+[0;32mI (175996) MASTER_RECV: Received from slave: count=17, msg=Hello Master![0m
+[0;32mI (176296) MASTER_SEND: Queued: count=176, msg=Hello Slave![0m
+[0;32mI (176996) MASTER_RECV: Received from slave: count=18, msg=Hello Master![0m
+[0;32mI (177296) MASTER_SEND: Queued: count=177, msg=Hello Slave![0m
+[0;32mI (177996) MASTER_RECV: Received from slave: count=19, msg=Hello Master![0m
+[0;32mI (178296) MASTER_SEND: Queued: count=178, msg=Hello Slave![0m
+[0;32mI (178996) MASTER_RECV: Received from slave: count=20, msg=Hello Master![0m
+[0;32mI (179296) MASTER_SEND: Queued: count=179, msg=Hello Slave![0m
+[0;32mI (179996) MASTER_RECV: Received from slave: count=21, msg=Hello Master![0m
+[0;32mI (180296) MASTER_SEND: Queued: count=180, msg=Hello Slave![0m
+[0;32mI (180996) MASTER_RECV: Received from slave: count=22, msg=Hello Master![0m
+[0;32mI (181296) MASTER_SEND: Queued: count=181, msg=Hello Slave![0m
+[0;32mI (181996) MASTER_RECV: Received from slave: count=23, msg=Hello Master![0m
+[0;32mI (182296) MASTER_SEND: Queued: count=182, msg=Hello Slave![0m
+[0;32mI (182996) MASTER_RECV: Received from slave: count=24, msg=Hello Master![0m
+[0;32mI (183296) MASTER_SEND: Queued: count=183, msg=Hello Slave![0m
+[0;32mI (183996) MASTER_RECV: Received from slave: count=25, msg=Hello Master![0m
+[0;32mI (184296) MASTER_SEND: Queued: count=184, msg=Hello Slave![0m
+[0;32mI (184996) MASTER_RECV: Received from slave: count=26, msg=Hello Master![0m
+[0;32mI (185296) MASTER_SEND: Queued: count=185, msg=Hello Slave![0m
+[0;32mI (185996) MASTER_RECV: Received from slave: count=27, msg=Hello Master![0m
+[0;32mI (186296) MASTER_SEND: Queued: count=186, msg=Hello Slave![0m
+[0;32mI (186996) MASTER_RECV: Received from slave: count=28, msg=Hello Master![0m
+[0;32mI (187296) MASTER_SEND: Queued: count=187, msg=Hello Slave![0m
+[0;32mI (187996) MASTER_RECV: Received from slave: count=29, msg=Hello Master![0m
+[0;32mI (188296) MASTER_SEND: Queued: count=188, msg=Hello Slave![0m
+[0;32mI (188996) MASTER_RECV: Received from slave: count=30, msg=Hello Master![0m
+[0;32mI (189296) MASTER_SEND: Queued: count=189, msg=Hello Slave![0m
+[0;32mI (189996) MASTER_RECV: Received from slave: count=31, msg=Hello Master![0m
+[0;32mI (190296) MASTER_SEND: Queued: count=190, msg=Hello Slave![0m
+[0;32mI (190996) MASTER_RECV: Received from slave: count=32, msg=Hello Master![0m
+[0;32mI (191296) MASTER_SEND: Queued: count=191, msg=Hello Slave![0m
+[0;32mI (191996) MASTER_RECV: Received from slave: count=33, msg=Hello Master![0m
+[0;32mI (192296) MASTER_SEND: Queued: count=192, msg=Hello Slave![0m
+[0;32mI (192996) MASTER_RECV: Received from slave: count=34, msg=Hello Master![0m
+[0;32mI (193296) MASTER_SEND: Queued: count=193, msg=Hello Slave![0m
+[0;32mI (193996) MASTER_RECV: Received from slave: count=35, msg=Hello Master![0m
+[0;32mI (194296) MASTER_SEND: Queued: count=194, msg=Hello Slave![0m
+[0;32mI (194996) MASTER_RECV: Received from slave: count=36, msg=Hello Master![0m
+[0;32mI (195296) MASTER_SEND: Queued: count=195, msg=Hello Slave![0m
+[0;32mI (195996) MASTER_RECV: Received from slave: count=37, msg=Hello Master![0m
+[0;32mI (196296) MASTER_SEND: Queued: count=196, msg=Hello Slave![0m
+[0;32mI (196996) MASTER_RECV: Received from slave: count=38, msg=Hello Master![0m
+[0;32mI (197296) MASTER_SEND: Queued: count=197, msg=Hello Slave![0m
+[0;32mI (197996) MASTER_RECV: Received from slave: count=39, msg=Hello Master![0m
+[0;32mI (198296) MASTER_SEND: Queued: count=198, msg=Hello Slave![0m
+[0;32mI (198996) MASTER_RECV: Received from slave: count=40, msg=Hello Master![0m
+[0;32mI (199296) MASTER_SEND: Queued: count=199, msg=Hello Slave![0m
+[0;32mI (199996) MASTER_RECV: Received from slave: count=41, msg=Hello Master![0m
+[0;32mI (200296) MASTER_SEND: Queued: count=200, msg=Hello Slave![0m
+[0;32mI (200996) MASTER_RECV: Received from slave: count=42, msg=Hello Master![0m
+[0;32mI (201296) MASTER_SEND: Queued: count=201, msg=Hello Slave![0m
+[0;32mI (201996) MASTER_RECV: Received from slave: count=43, msg=Hello Master![0m
+[0;32mI (202296) MASTER_SEND: Queued: count=202, msg=Hello Slave![0m
+[0;32mI (202996) MASTER_RECV: Received from slave: count=44, msg=Hello Master![0m
+[0;32mI (203296) MASTER_SEND: Queued: count=203, msg=Hello Slave![0m
+[0;32mI (203996) MASTER_RECV: Received from slave: count=45, msg=Hello Master![0m
+[0;32mI (204296) MASTER_SEND: Queued: count=204, msg=Hello Slave![0m
+[0;32mI (204996) MASTER_RECV: Received from slave: count=46, msg=Hello Master![0m
+[0;32mI (205296) MASTER_SEND: Queued: count=205, msg=Hello Slave![0m
+[0;32mI (205996) MASTER_RECV: Received from slave: count=47, msg=Hello Master![0m
+[0;32mI (206296) MASTER_SEND: Queued: count=206, msg=Hello Slave![0m
+[0;32mI (206996) MASTER_RECV: Received from slave: count=48, msg=Hello Master![0m
+[0;32mI (207296) MASTER_SEND: Queued: count=207, msg=Hello Slave![0m
+[0;32mI (207996) MASTER_RECV: Received from slave: count=49, msg=Hello Ma [0m
+[0;32mI (208296) MASTER_SEND: Queued: count=208, msg=Hello Slave![0m
+[0;32mI (208996) MASTER_RECV: Received from slave: count=50, msg=Hello Master![0m
+[0;32mI (209296) MASTER_SEND: Queued: count=209, msg=Hello Slave![0m
+[0;32mI (209996) MASTER_RECV: Received from slave: count=51, msg=Hello Master![0m
+[0;32mI (210296) MASTER_SEND: Queued: count=210, msg=Hello Slave![0m
+[0;32mI (210996) MASTER_RECV: Received from slave: count=52, msg=Hello Master![0m
+[0;32mI (211296) MASTER_SEND: Queued: count=211, msg=Hello Slave![0m
+[0;32mI (211996) MASTER_RECV: Received from slave: count=53, msg=Hello Master![0m
+[0;32mI (212296) MASTER_SEND: Queued: count=212, msg=Hello Slave![0m
+[0;32mI (212996) MASTER_RECV: Received from slave: count=54, msg=Hello Master![0m
+[0;32mI (213296) MASTER_SEND: Queued: count=213, msg=Hello Slave![0m
+[0;32mI (213996) MASTER_RECV: Received from slave: count=55, msg=Hello Master![0m
+[0;32mI (214296) MASTER_SEND: Queued: count=214, msg=Hello Slave![0m
+[0;32mI (214996) MASTER_RECV: Received from slave: count=56, msg=Hello Master![0m
+[0;32mI (215296) MASTER_SEND: Queued: count=215, msg=Hello Slave![0m
+[0;32mI (215996) MASTER_RECV: Received from slave: count=57, msg=Hello Master![0m
+[0;32mI (216296) MASTER_SEND: Queued: count=216, msg=Hello Slave![0m
+[0;32mI (216996) MASTER_RECV: Received from slave: count=58, msg=Hello Master![0m
+[0;32mI (217296) MASTER_SEND: Queued: count=217, msg=Hello Slave![0m
+[0;32mI (217996) MASTER_RECV: Received from slave: count=59, msg=Hello Master![0m
+[0;32mI (218296) MASTER_SEND: Queued: count=218, msg=Hello Slave![0m
+[0;32mI (218996) MASTER_RECV: Received from slave: count=60, msg=Hello Master![0m
+[0;32mI (219296) MASTER_SEND: Queued: count=219, msg=Hello Slave![0m
+[0;32mI (219996) MASTER_RECV: Received from slave: count=61, msg=Hello Master![0m
+[0;32mI (220296) MASTER_SEND: Queued: count=220, msg=Hello Slave![0m
+[0;32mI (220996) MASTER_RECV: Received from slave: count=62, msg=Hello Master![0m
+[0;32mI (221296) MASTER_SEND: Queued: count=221, msg=Hello Slave![0m
+[0;32mI (221996) MASTER_RECV: Received from slave: count=63, msg=Hello Master![0m
+[0;32mI (222296) MASTER_SEND: Queued: count=222, msg=Hello Slave![0m
+[0;32mI (222996) MASTER_RECV: Received from slave: count=64, msg=Hello Master![0m
+[0;32mI (223296) MASTER_SEND: Queued: count=223, msg=Hello Slave![0m
+[0;32mI (223996) MASTER_RECV: Received from slave: count=65, msg=Hello Master![0m
+[0;32mI (224296) MASTER_SEND: Queued: count=224, msg=Hello Slave![0m
+[0;32mI (224996) MASTER_RECV: Received from slave: count=66, msg=Hello Master![0m
+[0;32mI (225296) MASTER_SEND: Queued: count=225, msg=Hello Slave![0m
+[0;32mI (225996) MASTER_RECV: Received from slave: count=67, msg=Hello Master![0m
+[0;32mI (226296) MASTER_SEND: Queued: count=226, msg=Hello Slave![0m
+[0;32mI (226996) MASTER_RECV: Received from slave: count=68, msg=Hello Master![0m
+[0;32mI (227296) MASTER_SEND: Queued: count=227, msg=Hello Slave![0m
+[0;32mI (227996) MASTER_RECV: Received from slave: count=69, msg=Hello Master![0m
+[0;32mI (228296) MASTER_SEND: Queued: count=228, msg=Hello Slave![0m
+[0;32mI (228996) MASTER_RECV: Received from slave: count=70, msg=Hello Master![0m
+[0;32mI (229296) MASTER_SEND: Queued: count=229, msg=Hello Slave![0m
+[0;32mI (229996) MASTER_RECV: Received from slave: count=71, msg=Hello Master![0m
+[0;32mI (230296) MASTER_SEND: Queued: count=230, msg=Hello Slave![0m
+[0;32mI (230996) MASTER_RECV: Received from slave: count=72, msg=Hello Master![0m
+[0;32mI (231296) MASTER_SEND: Queued: count=231, msg=Hello Slave![0m
+[0;32mI (231996) MASTER_RECV: Received from slave: count=73, msg=Hello Master![0m
+[0;32mI (232296) MASTER_SEND: Queued: count=232, msg=Hello Slave![0m
+[0;32mI (232996) MASTER_RECV: Received from slave: count=74, msg=Hell`[0m
+[0;32mI (233296) MASTER_SEND: Queued: count=233, msg=Hello Slave![0m
+[0;32mI (233996) MASTER_RECV: Received from slave: count=75, msg=Hed[0m
+[0;32mI (234296) MASTER_SEND: Queued: count=234, msg=Hello Slave![0m
+[0;32mI (234996) MASTER_RECV: Received from slave: count=76, msg=Hello Master![0m
+[0;32mI (235296) MASTER_SEND: Queued: count=235, msg=Hello Slave![0m
+[0;32mI (235996) MASTER_RECV: Received from slave: count=77, msg=Hello Master![0m
+[0;32mI (236296) MASTER_SEND: Queued: count=236, msg=Hello Slave![0m
+[0;32mI (236996) MASTER_RECV: Received from slave: count=78, msg=Hello Master![0m
+[0;32mI (237296) MASTER_SEND: Queued: count=237, msg=Hello Slave![0m
+[0;32mI (237996) MASTER_RECV: Received from slave: count=79, msg=Hello Master![0m
+[0;32mI (238296) MASTER_SEND: Queued: count=238, msg=Hello Slave![0m
+[0;32mI (238996) MASTER_RECV: Received from slave: count=80, msg=Hello Master![0m
+[0;32mI (239296) MASTER_SEND: Queued: count=239, msg=Hello Slave![0m
+[0;32mI (239996) MASTER_RECV: Received from slave: count=81, msg=Hello Master![0m
+[0;32mI (240296) MASTER_SEND: Queued: count=240, msg=Hello Slave![0m
+[0;32mI (240996) MASTER_RECV: Received from slave: count=82, msg=Hello Master![0m
+[0;32mI (241296) MASTER_SEND: Queued: count=241, msg=Hello Slave![0m
+[0;32mI (241996) MASTER_RECV: Received from slave: count=83, msg=Hello Master![0m
+[0;32mI (242296) MASTER_SEND: Queued: count=242, msg=Hello Slave![0m
+[0;32mI (242996) MASTER_RECV: Received from slave: count=84, msg=Hello Master![0m
+[0;32mI (243296) MASTER_SEND: Queued: count=243, msg=Hello Slave![0m
+[0;32mI (243996) MASTER_RECV: Received from slave: count=85, msg=Hello Master![0m
+[0;32mI (244296) MASTER_SEND: Queued: count=244, msg=Hello Slave![0m
+[0;32mI (244996) MASTER_RECV: Received from slave: count=86, msg=Hello Master![0m
+[0;32mI (245296) MASTER_SEND: Queued: count=245, msg=Hello Slave![0m
+[0;32mI (245996) MASTER_RECV: Received from slave: count=87, msg=Hello Master![0m
+[0;32mI (246296) MASTER_SEND: Queued: count=246, msg=Hello Slave![0m
+[0;32mI (246996) MASTER_RECV: Received from slave: count=88, msg=Hello Master![0m
+[0;32mI (247296) MASTER_SEND: Queued: count=247, msg=Hello Slave![0m
+[0;32mI (247996) MASTER_RECV: Received from slave: count=89, msg=Hello Master![0m
+[0;32mI (248296) MASTER_SEND: Queued: count=248, msg=Hello Slave![0m
+[0;32mI (248996) MASTER_RECV: Received from slave: count=90, msg=Hello Master![0m
+[0;32mI (249296) MASTER_SEND: Queued: count=249, msg=Hello Slave![0m
+[0;32mI (249996) MASTER_RECV: Received from slave: count=91, msg=Hello Master![0m

@@ -1,0 +1,11 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=1 E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\SPI\esp32_spi_slave
+CMake Error at E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/tools/cmake/build.cmake:328 (message):
+  Failed to resolve component 'spi_service' required by component 'main':
+  unknown name.
+Call Stack (most recent call first):
+  E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/tools/cmake/build.cmake:371 (__build_resolve_and_add_req)
+  E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/tools/cmake/build.cmake:685 (__build_expand_requirements)
+  E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/tools/cmake/project.cmake:740 (idf_build_process)
+  CMakeLists.txt:3 (project)
+
+

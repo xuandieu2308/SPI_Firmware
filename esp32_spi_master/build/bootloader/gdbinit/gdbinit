@@ -1,0 +1,2 @@
+source E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/esp32_spi_master/build/bootloader/gdbinit/symbols
+source E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/esp32_spi_master/build/bootloader/gdbinit/connect

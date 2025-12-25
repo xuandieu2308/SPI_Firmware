@@ -1,0 +1,5 @@
+# ninja log v6
+1	29	7791808652321937	project_elf_src_esp32.c	ca619a3c39a48e81
+1	29	7791808652321937	E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/build/project_elf_src_esp32.c	ca619a3c39a48e81
+29	46	7791808652411582	CMakeFiles/SPI.elf.dir/project_elf_src_esp32.c.obj	f79cd1fc6865f89f
+47	96	7791808652587259	SPI.elf	eb5e80539931d94a

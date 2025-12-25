@@ -1,0 +1,14 @@
+E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/build/CMakeFiles/menuconfig.dir
+E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/build/CMakeFiles/confserver.dir
+E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/build/CMakeFiles/save-defconfig.dir
+E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/build/CMakeFiles/_project_elf_src.dir
+E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/build/CMakeFiles/SPI.elf.dir
+E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/build/CMakeFiles/size.dir
+E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/build/CMakeFiles/size-files.dir
+E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/build/CMakeFiles/size-components.dir
+E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/build/CMakeFiles/uf2.dir
+E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/build/CMakeFiles/uf2-app.dir
+E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/build/CMakeFiles/edit_cache.dir
+E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/build/CMakeFiles/rebuild_cache.dir
+E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/build/esp-idf/CMakeFiles/edit_cache.dir
+E:/ESP32_NEWBIE/Espressif/frameworks/esp-idf-v5.5/examples/get-started/SPI/build/esp-idf/CMakeFiles/rebuild_cache.dir
